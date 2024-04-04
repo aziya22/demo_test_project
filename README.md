@@ -36,15 +36,17 @@ I’ve created automation.py file inside main directory demo_test_project
 Here we will create a batch file (e.g runtest.bat) to run our test.
 I’ve created batch file inside main directory too.
 
-@echo off
-rem Activate the virtual environment (if you are using one)
-call venv\Scripts\activate
+@echo off<br>
+rem Activate the virtual environment (if you are using one)<br>
+call venv\Scripts\activate<br>
 
-rem Run Behave tests with specified options
-behave -f pretty -o test-results
 
-rem Deactivate the virtual environment (if activated)
-deactivate
+rem Run Behave tests with specified options<br>
+behave -f pretty -o test-results<br>
+
+
+rem Deactivate the virtual environment (if activated)<br>
+deactivate<br>
 
 ## Step6: Generate BehaveX Report
 BehaveX generates reports automatically. By using behave -f Pretty -o test-results in the batch file, it will generate the BehaveX report in the test-results directory.
