@@ -1,0 +1,29 @@
+Feature: User Login and Order Product # features/login.feature:1
+
+  Scenario: Successful Login                                                                                    # features/login.feature:3
+    Given I am on the Demo Login Page                                                                           # features/steps/step_definitions.py:22
+    When I fill the account information for account StandardUser into the Username field and the Password field # features/steps/step_definitions.py:27
+    And I click the Login Button                                                                                # features/steps/step_definitions.py:34
+    Then I am redirected to the Demo Main Page                                                                  # features/steps/step_definitions.py:39
+    And I verify the App Logo exists                                                                            # features/steps/step_definitions.py:49
+
+  Scenario: Failed Login                                                                                         # features/login.feature:10
+    Given I am on the Sauce Demo Login Page                                                                      # features/steps/step_definitions.py:55
+    When I fill the account information for account LockedOutUser into the Username field and the Password field # features/steps/step_definitions.py:60
+    And I click the Login Button                                                                                 # features/steps/step_definitions.py:34
+    Then I verify the Error Message contains the text "Sorry, this user has been banned."                        # features/steps/step_definitions.py:67
+
+  Scenario: Order a product                                                                 # features/login.feature:16
+    Given I am on the inventory page                                                        # features/steps/step_definitions.py:74
+    When user sorts products from low price to high price                                   # features/steps/step_definitions.py:88
+    And user adds lowest priced product                                                     # features/steps/step_definitions.py:95
+    And user clicks on cart                                                                 # features/steps/step_definitions.py:100
+    And user clicks on checkout                                                             # features/steps/step_definitions.py:106
+    And user enters first name John                                                         # features/steps/step_definitions.py:114
+    And user enters last name Doe                                                           # features/steps/step_definitions.py:119
+    And user enters zip code 123                                                            # features/steps/step_definitions.py:124
+    And user clicks Continue button                                                         # features/steps/step_definitions.py:129
+    Then I verify in Checkout overview page if the total amount for the added item is $8.63 # features/steps/step_definitions.py:134
+    When user clicks Finish button                                                          # features/steps/step_definitions.py:142
+    Then Thank You header is shown in Checkout Complete page                                # features/steps/step_definitions.py:149
+
