@@ -57,10 +57,10 @@ Report is getting generated inside our main directory too.
 Steps to setup virtual environment through CMD–
 1.	Go to directory
 2.	Open cmd in that directory
-3.	Activate virtual environment
-python –m venv venv
+3.	Activate virtual environment<br>
+python –m venv venv<br>
 venv\Scrips\activate
-4.	Run the code
+4.	Run the code<br>
 behave –f Pretty –o test-results
-5.	After successful test results deactivate the virtual environment
-Deactivate
+5.	After successful test results deactivate the virtual environment<br>
+deactivate
