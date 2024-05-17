@@ -1,5 +1,5 @@
 # demo_test_project
-This is a practice coding test.
+This is a practice coding test using BDD testing methodology.
 
 ## Step1: Project setup
 #### 1.	New directory creation  
