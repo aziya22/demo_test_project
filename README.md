@@ -1,4 +1,4 @@
-# demo_test_project
+# BDD test demo project
 This is a practice coding test using BDD testing methodology.
 
 ## Step1: Project setup
